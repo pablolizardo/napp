@@ -1,5 +1,5 @@
 {
-  "name": "napp",
+  "name": "xt",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/generator": "^7.23.6",
+    "@babel/parser": "^7.23.6",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-typescript": "^7.23.3",
+    "@babel/traverse": "^7.23.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "install": "^0.13.0",
+    "lucide-react": "^0.312.0",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__traverse": "^7.20.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "postcss-nesting": "^12.0.2",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }

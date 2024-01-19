@@ -1,16 +1,14 @@
-import "@/styles/globals.css";
 import Header from "./header";
-import { root } from "@/seo/metadata";
-
+import "@/xt/styles/globals.css";
+import { root } from "@/xt/seo/metadata";
+import { Inter } from 'next/font/google'
 export const metadata = root
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const interFont = Inter({ display: "swap", subsets: ["latin"], variable: "--font-sans" });
+
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${interFont.className} `}>
       <body className="p-5" >
         <Header />
         {children}

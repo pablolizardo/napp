@@ -1,0 +1,40 @@
+{
+  "appName": "landing page",
+  "modules": {
+    "footer": "minimal",
+    "navbar": "default",
+    "landing": {
+      "hero": true,
+      "testimonials": true,
+      "FAQ": true,
+      "features": true,
+      "contact": true,
+      "map": false
+    }
+  },
+  "styling": {
+    "colorTheme": "light",
+    "components": "shadcn",
+    "framework": "tailwind"
+  },
+  "features": {
+    "Paywall": false,
+    "Mail": false,
+    "Database": false,
+    "Auth": false,
+    "SEO": false,
+    "Blog": false,
+    "Shadcn/ui": false,
+    "OG Images": false
+  },
+  "pages": [
+    {
+      "name": "testr",
+      "loading": true,
+      "error": true,
+      "fetchData": "always",
+      "revalidatePattern": "never",
+      "generateStaticPaths": "never"
+    }
+  ]
+}
