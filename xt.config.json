@@ -29,7 +29,31 @@
   },
   "pages": [
     {
-      "name": "testr",
+      "name": "landing",
+      "loading": true,
+      "error": true,
+      "fetchData": "always",
+      "revalidatePattern": "never",
+      "generateStaticPaths": "never"
+    },
+    {
+      "name": "Contactanos",
+      "loading": true,
+      "error": true,
+      "fetchData": "always",
+      "revalidatePattern": "never",
+      "generateStaticPaths": "never"
+    },
+    {
+      "name": "login",
+      "loading": true,
+      "error": true,
+      "fetchData": "always",
+      "revalidatePattern": "never",
+      "generateStaticPaths": "never"
+    },
+    {
+      "name": "test",
       "loading": true,
       "error": true,
       "fetchData": "always",

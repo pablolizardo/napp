@@ -6,7 +6,6 @@ module.exports = {
   content: [
     "src/app/**/*.{ts,tsx}",
     "src/xt/components/**/*.{ts,tsx}",
-    "src/xt/styles/**/*.{css}",
   ],
   theme: {
     container: {
@@ -53,6 +52,7 @@ module.exports = {
         },
       },
       borderRadius: {
+        DEFAULT: `var(--radius)`,
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",

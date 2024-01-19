@@ -1,4 +1,4 @@
-import { generateSlug } from "@/xt/utils/url";
+import { generateSlug } from "@/xt/lib/url";
 import { statSync, } from "fs";
 import { mkdir, readFile, readdir, rm, rmdir, unlink, writeFile } from "fs/promises";
 import path from "path";
