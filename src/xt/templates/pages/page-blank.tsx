@@ -1,4 +1,10 @@
+//XTuseClient
+
+//XTimports
+//XTfetchOutside
+
 const Page = () => {
+    //XTfetchInside
     return <div>
         <h1>$title</h1>
         <p>

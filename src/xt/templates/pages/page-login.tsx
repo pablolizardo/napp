@@ -8,13 +8,19 @@ import { Github } from "lucide-react"
 import { Input } from "@/xt/components/ui/input"
 import { Label } from "@/xt/components/ui/label"
 // import { UserAuthForm } from "@/app/examples/authentication/components/user-auth-form"
+// XT imports
 
 export const metadata: Metadata = {
     title: "Authentication",
     description: "Authentication forms built using the components.",
 }
 
+// XT fetchInsideOutside
+
 export default function AuthenticationPage() {
+
+    // XT fetchInside
+
     return (
         <>
             <div className="md:hidden">

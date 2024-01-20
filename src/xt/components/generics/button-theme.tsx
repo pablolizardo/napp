@@ -1,17 +1,19 @@
-'use client'
-import { useTheme } from 'next-themes'
-import { Button } from '../ui/button'
+"use client"
+
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { Button } from "@/xt/components/ui/button"
 
 const ButtonTheme = () => {
     const { theme, setTheme } = useTheme()
+    const handleSetTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
-    return (
-        <div>
-            {theme === 'dark' ? <Button onClick={() => setTheme('light')}>Light Mode</Button> :
-                <Button onClick={() => setTheme('dark')}>Dark Mode</Button>}
+    return <Button
+        onClick={handleSetTheme}>
+        {theme === 'dark' ? <Sun /> : <Moon />}
+    </Button>
 
-        </div>
-    )
 }
 
 export default ButtonTheme

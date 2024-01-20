@@ -1,4 +1,8 @@
+// XT imports
+// XT fetchInsideOutside
+
 const Page = () => {
+    // XT fetchInside
     return <div>
         <header>
             <h1>Frequently Asked Questions (FAQ)</h1>

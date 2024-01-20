@@ -1,22 +1,32 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "node_modules":true,
-        ".next":true,
-        "next-env.d.ts":true,
-        ".gitignore":true,
-        "README.md":true,
-        "tsconfig.json":true,
-        ".eslintrc.json":true,
-        "postcss.config.js":true,
-        ".babel.rc":true,
-        "bun.lockb":true,
-        "package-lock.json":true,
-        ".vscode":true
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "node_modules": true,
+    ".next": true,
+    "next-env.d.ts": true,
+    ".gitignore": true,
+    "README.md": true,
+    "tsconfig.json": true,
+    ".eslintrc.json": true,
+    "postcss.config.js": true,
+    ".babel.rc": true,
+    "bun.lockb": true,
+    "package-lock.json": true,
+    ".vscode": true
+  },
+  "folder-path-color.folders": [
+    { "path": "src/xt", "symbol": "XT", "tooltip": "Common", "color": "green" }
+  ],
+  "folder-color.pathColors": [
+    {
+      "folderPath": "xt/",
+      "color": "foldercolorizer.Gold",
+      "badge": "xt"
     }
+  ]
 }

@@ -26,11 +26,18 @@ export const handleApplyTheme = async (formData: FormData) => {
 
 ${content}
 
-html, body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    @apply antialiased leading-relaxed;
+@layer base {
+  * {
+    @apply border-border;
 }
+
+body {
+    @apply antialiased leading-relaxed;
+    @apply bg-background text-foreground;
+    accent-color: hsl(var(--primary));
+  }
+}
+
 `
     const roundedApplied = appendContent.replace('--radius: 0.3rem', `--radius: ${rounded}`)
     await writeFile(`src/xt/styles/globals.css`, roundedApplied, 'utf8')

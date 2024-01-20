@@ -17,19 +17,61 @@
     "components": "shadcn",
     "framework": "tailwind"
   },
-  "features": {
-    "Paywall": false,
-    "Mail": false,
-    "Database": false,
-    "Auth": false,
-    "SEO": false,
-    "Blog": false,
-    "Shadcn/ui": false,
-    "OG Images": false
-  },
+  "features": [
+    {
+      "value": "paywall",
+      "label": "Paywall",
+      "active": false
+    },
+    {
+      "value": "i18n",
+      "label": "i18n",
+      "active": false
+    },
+    {
+      "value": "mail",
+      "label": "Mail",
+      "active": false
+    },
+    {
+      "value": "database",
+      "label": "Database",
+      "active": true
+    },
+    {
+      "value": "orm",
+      "label": "ORM",
+      "active": false
+    },
+    {
+      "value": "authentication",
+      "label": "Auth",
+      "active": false
+    },
+    {
+      "value": "seo",
+      "label": "SEO",
+      "active": false
+    },
+    {
+      "value": "blog",
+      "label": "Blog",
+      "active": false
+    },
+    {
+      "value": "shadcn",
+      "label": "Shadcn/ui",
+      "active": false
+    },
+    {
+      "value": "og",
+      "label": "OG Images",
+      "active": false
+    }
+  ],
   "pages": [
     {
-      "name": "landing",
+      "name": "on server",
       "loading": true,
       "error": true,
       "fetchData": "always",
@@ -37,23 +79,7 @@
       "generateStaticPaths": "never"
     },
     {
-      "name": "Contactanos",
-      "loading": true,
-      "error": true,
-      "fetchData": "always",
-      "revalidatePattern": "never",
-      "generateStaticPaths": "never"
-    },
-    {
-      "name": "login",
-      "loading": true,
-      "error": true,
-      "fetchData": "always",
-      "revalidatePattern": "never",
-      "generateStaticPaths": "never"
-    },
-    {
-      "name": "test",
+      "name": "on client side ",
       "loading": true,
       "error": true,
       "fetchData": "always",
