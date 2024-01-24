@@ -4,8 +4,11 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 module.exports = {
   darkMode: ["class"],
   content: [
-    "src/app/**/*.{ts,tsx}",
-    "src/xt/components/**/*.{ts,tsx}",
+    "src/app/**/*.tsx",
+    "src/xt/components/**/*.tsx",
+    "src/xt/templates/components/**/*.tsx",
+    "src/xt/templates/pages/**/*.tsx",
+    "src/xt/templates/generics/**/*.tsx",
   ],
   theme: {
     container: {
@@ -56,6 +59,14 @@ module.exports = {
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
+      },
+      spacing: {
+        '1': 'var(--space)',
+        '2': 'calc(var(--space) + 0.125rem)',
+        '3': 'calc(var(--space) + 0.25rem)',
+        '4': 'calc(var(--space) + 0.375rem)',
+        '5': 'calc(var(--space) + 0.5rem)',
+        '6': 'calc(var(--space) + 0.75rem)',
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

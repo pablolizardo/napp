@@ -1,9 +1,9 @@
-import { generateSlug } from "@/xt/lib/url";
 import { statSync, } from "fs";
 import { mkdir, readFile, readdir, rm, rmdir, writeFile } from "fs/promises";
 import path from "path";
-import { fetchClientFunctionSign, fetchClientImports, fetchClientInsidePage } from "../templates/functions/fetch/client";
-import { fetchServerFunctionSign, fetchServerInsidePage, fetchServerOutside } from "../templates/functions/fetch/server";
+import { generateSlug } from "../lib/utils";
+import { fetchClientFunctionSign, fetchClientImports, fetchClientInsidePage } from "../templates/functions/fetch/client.mjs";
+import { fetchServerFunctionSign, fetchServerInsidePage, fetchServerOutside } from "../templates/functions/fetch/server.mjs";
 import { addPageToConfig, removeAllPagesFromConfig } from "./config";
 
 export const handleAddPage = async (formData: FormData) => {
@@ -12,41 +12,44 @@ export const handleAddPage = async (formData: FormData) => {
     const loading = formData.get('loading') as string
     const error = formData.get('error') as string
     const fetchDataIn = formData.get('fetchDataIn') as string
-
+    const fetchDataFrom = formData.get('fetchDataFrom') as string
 
     const sanitizedName = generateSlug(name)
     await mkdir(`src/app/(site)/${sanitizedName}`, null)
     const templateName = formData.get('template')
     const content = await readFile(`src/xt/templates/pages/${templateName}.tsx`, 'utf8')
-    let contentFile = content.replace('$title', name)
+    let contentFile = content.replace('{/*@xt-app-name*/}', name)
     console.log('fetchDataIn', fetchDataIn)
     switch (fetchDataIn) {
         case "server":
-            contentFile = contentFile.replace('//XTuseClient', '')
-            contentFile = contentFile.replace('//XTimports', '')
-            contentFile = contentFile.replace('//XTfetchOutside', fetchServerOutside)
-            contentFile = contentFile.replace('//XTfetchInside', fetchServerInsidePage)
+            contentFile = contentFile.replace('//@xt-use-client', '')
+            contentFile = contentFile.replace('//@xt-imports', '')
+            contentFile = contentFile.replace('//@xt-fetch-outside', fetchServerOutside)
+            contentFile = contentFile.replace('//@xt-fetch-inside', fetchServerInsidePage)
             contentFile = contentFile.replace('const Page = () => {', fetchServerFunctionSign)
             break;
         case "client":
-            contentFile = contentFile.replace('//XTuseClient', "'use client'")
-            contentFile = contentFile.replace('//XTimports', fetchClientImports)
-            contentFile = contentFile.replace('//XTfetchOutside', '')
+            contentFile = contentFile.replace('//@xt-use-client', "'use client'")
+            contentFile = contentFile.replace('//@xt-imports', fetchClientImports)
+            contentFile = contentFile.replace('//@xt-fetch-outside', '')
             contentFile = contentFile.replace('const Page = () => {', fetchClientFunctionSign)
-            contentFile = contentFile.replace('//XTfetchInside', fetchClientInsidePage)
+            contentFile = contentFile.replace('//@xt-fetch-inside', fetchClientInsidePage)
             break;
         case "none":
-            contentFile = contentFile.replace('//XTuseClient', '')
-            contentFile = contentFile.replace('//XTimports', '')
-            contentFile = contentFile.replace('//XTfetchOutside', '')
-            contentFile = contentFile.replace('//XTfetchInside', '')
+            contentFile = contentFile.replace('//@xt-use-client', '')
+            contentFile = contentFile.replace('//@xt-imports', '')
+            contentFile = contentFile.replace('//@xt-fetch-outside', '')
+            contentFile = contentFile.replace('//@xt-fetch-inside', '')
             break;
         default:
-            contentFile = contentFile.replace('//XTuseClient', '')
-            contentFile = contentFile.replace('//XTimports', '')
-            contentFile = contentFile.replace('//XTfetchOutside', '')
-            contentFile = contentFile.replace('//XTfetchInside', '')
+            contentFile = contentFile.replace('//@xt-use-client', '')
+            contentFile = contentFile.replace('//@xt-imports', '')
+            contentFile = contentFile.replace('//@xt-fetch-outside', '')
+            contentFile = contentFile.replace('//@xt-fetch-inside', '')
             break;
+    }
+    if (fetchDataFrom) {
+        contentFile = contentFile.replace('https://jsonplaceholder.typicode.com/users', fetchDataFrom)
     }
 
 
@@ -76,16 +79,14 @@ export const handleAddPage = async (formData: FormData) => {
 
 }
 
-export const getPagesInFolder = async () => {
+export const getPagesInFolder = async (): Promise<string[]> => {
     'use server'
     const content = await readdir('src/app/(site)')
     const pages = content
         .filter(page => statSync(path.join('src/app/(site)', page))
             .isDirectory())
         .filter(page => !page.includes('('))
-
     return pages
-
 }
 
 export const handleRemoveAllPages = async () => {

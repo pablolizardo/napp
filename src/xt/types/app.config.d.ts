@@ -1,8 +1,9 @@
 export default interface xtConfig {
     appName: string;
-    modules: xtModules;
+    appDescription?: string;
     styling: xtStyling;
     features: xtFeatures;
+    components: xtComponents;
     pages: xtPage[];
 }
 
@@ -13,6 +14,7 @@ export interface xtPage {
     fetchData: string;
     revalidatePattern: string;
     generateStaticPaths: string;
+    template: string;
 }
 
 export interface xtFeatures {
@@ -32,17 +34,20 @@ export interface xtStyling {
     framework: string;
 }
 
-export interface xtModules {
+export interface xtComponents {
     footer: string;
     navbar: string;
     landing: xtLanding;
 }
 
 export interface xtLanding {
-    hero: boolean;
-    testimonials: boolean;
-    FAQ: boolean;
-    features: boolean;
-    contact: boolean;
-    map: boolean;
+    hero: string | null;
+    testimonials: string | null;
+    FAQ: string | null;
+    features: string | null;
+    contact: string | null;
+    team: string | null;
+    pricing: string | null;
+    map: string | null;
+
 }

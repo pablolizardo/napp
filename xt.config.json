@@ -1,90 +1,114 @@
 {
-  "appName": "landing page",
-  "modules": {
-    "footer": "minimal",
-    "navbar": "default",
-    "landing": {
-      "hero": true,
-      "testimonials": true,
-      "FAQ": true,
-      "features": true,
-      "contact": true,
-      "map": false
-    }
-  },
+  "appName": "XT",
+  "appDescription": "Ship your startupin days,not weeks",
   "styling": {
-    "colorTheme": "light",
-    "components": "shadcn",
-    "framework": "tailwind"
+    "theme": "yellow",
+    "rounded": "1rem",
+    "baseSize": ".4rem",
+    "gap": "1",
+    "sectionGap": "2"
   },
   "features": [
     {
-      "value": "paywall",
+      "name": "paywall",
       "label": "Paywall",
       "active": false
     },
     {
-      "value": "i18n",
+      "name": "i18n",
       "label": "i18n",
       "active": false
     },
     {
-      "value": "mail",
+      "name": "mail",
       "label": "Mail",
       "active": false
     },
     {
-      "value": "database",
+      "name": "database",
       "label": "Database",
       "active": true
     },
     {
-      "value": "orm",
+      "name": "orm",
       "label": "ORM",
       "active": false
     },
     {
-      "value": "authentication",
+      "name": "authentication",
       "label": "Auth",
       "active": false
     },
     {
-      "value": "seo",
+      "name": "seo",
       "label": "SEO",
       "active": false
     },
     {
-      "value": "blog",
+      "name": "blog",
       "label": "Blog",
       "active": false
     },
     {
-      "value": "shadcn",
+      "name": "shadcn",
       "label": "Shadcn/ui",
       "active": false
     },
     {
-      "value": "og",
+      "name": "og",
       "label": "OG Images",
       "active": false
     }
   ],
+  "components": {
+    "navbar": "default",
+    "footer": "links",
+    "landing": {
+      "hero": "minimal",
+      "testimonials": "cards",
+      "FAQ": null,
+      "pricing": "default",
+      "features": null,
+      "contact": null,
+      "team": "grid",
+      "map": null
+    }
+  },
   "pages": [
     {
-      "name": "on server",
+      "name": "test",
+      "fetchData": "server",
       "loading": true,
       "error": true,
-      "fetchData": "always",
-      "revalidatePattern": "never",
-      "generateStaticPaths": "never"
+      "template": "pricing"
     },
     {
-      "name": "on client side ",
+      "name": "dashboard",
+      "fetchData": "none",
       "loading": true,
       "error": true,
-      "fetchData": "always",
-      "revalidatePattern": "never",
-      "generateStaticPaths": "never"
+      "template": "dashboard"
+    },
+    {
+      "name": "cards",
+      "fetchData": "client",
+      "loading": false,
+      "error": false,
+      "template": "cards"
+    },
+    {
+      "name": "pricing",
+      "fetchData": "client",
+      "loading": false,
+      "error": false,
+      "template": "pricing"
+    },
+    {
+      "name": "login",
+      "fetchData": "server",
+      "loading": true,
+      "error": true,
+      "template": "login"
     }
   ]
 }

@@ -1,0 +1,330 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "appName": {
+      "type": "string"
+    },
+    "appDescription": {
+      "type": "string"
+    },
+    "styling": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string"
+        },
+        "rounded": {
+          "type": "string"
+        },
+        "baseSize": {
+          "type": "string"
+        },
+        "gap": {
+          "type": "string"
+        },
+        "sectionGap": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme",
+        "rounded",
+        "baseSize",
+        "gap",
+        "sectionGap"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "active"
+          ]
+        }
+      ]
+    },
+    "components": {
+      "type": "object",
+      "properties": {
+        "navbar": {
+          "type": "string"
+        },
+        "footer": {
+          "type": "string"
+        },
+        "landing": {
+          "type": "object",
+          "properties": {
+            "hero": {
+              "type": "string"
+            },
+            "testimonials": {
+              "type": "string"
+            },
+            "FAQ": {
+              "type": "null"
+            },
+            "pricing": {
+              "type": "string"
+            },
+            "features": {
+              "type": "null"
+            },
+            "contact": {
+              "type": "null"
+            },
+            "team": {
+              "type": "string"
+            },
+            "map": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "hero",
+            "testimonials",
+            "FAQ",
+            "pricing",
+            "features",
+            "contact",
+            "team",
+            "map"
+          ]
+        }
+      },
+      "required": [
+        "navbar",
+        "footer",
+        "landing"
+      ]
+    },
+    "pages": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "loading": {
+              "type": "boolean"
+            },
+            "error": {
+              "type": "boolean"
+            },
+            "fetchData": {
+              "type": "string",
+              "required": [
+                "client",
+                "server",
+                "none"
+              ]
+            },
+            "revalidatePattern": {
+              "type": "string"
+            },
+            "generateStaticPaths": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "appName",
+    "appDescription",
+    "styling",
+    "features",
+    "components",
+    "pages"
+  ]
+}

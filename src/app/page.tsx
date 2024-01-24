@@ -1,8 +1,28 @@
+//@xt-imports
 
-export default function Home() {
+import xtConfig from "@/xt";
+import React from "react";
+
+const Home = async () => {
+
+  const Hero = React.lazy(() => import(`@/xt/templates/components/landing/hero/${xtConfig.components.landing.hero}.tsx`))
+  const Testimonial = React.lazy(() => import(`@/xt/templates/components/landing/testimonials/${xtConfig.components.landing.testimonials}.tsx`))
+  const Team = React.lazy(() => import(`@/xt/templates/components/landing/team/${xtConfig.components.landing.team}.tsx`))
+  const Pricing = React.lazy(() => import(`@/xt/templates/components/landing/pricing/${xtConfig.components.landing.pricing}.tsx`))
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to your next App</h1>
+    <main className="grid justify-center text-center items-center  p-24">
+      <Hero />
+      <Testimonial />
+      <Team />
+      <Pricing />
+      {/*@xt-faq*/}
+      {/*@xt-pricing*/}
+      {/*@xt-features*/}
+      {/*@xt-contact*/}
+      {/*@xt-map*/}
+      {/*@xt-footer*/}
     </main>
   );
 }
+
+export default Home

@@ -1,23 +1,24 @@
-import { root } from "@/xt/seo/metadata";
-import Header from "./header";
-import { GeistSans } from "geist/font/sans";
-
-import "@/xt/styles/globals.css";
+import "@/app/globals.css";
 import { Providers } from "@/xt/components/generics/providers";
+import { xtGlobalStyles } from "@/xt/lib/styling";
+import { root } from "@/xt/seo/metadata";
+import { GeistSans } from "geist/font/sans";
+import React from "react";
+import Header from "./header";
 
 export const metadata = root
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+const RootLayout = ({ children, }: Readonly<{ children: React.ReactNode; }>) => {
   return (
-    <html lang="en" className={`${GeistSans.className}`} suppressHydrationWarning>
-      <body className="p-3" >
+    <html lang="en" className={`${GeistSans.className} `} suppressHydrationWarning style={xtGlobalStyles}>
+      <body>
         <Providers>
-          <>
-            <Header />
-            {children}
-          </>
+          <Header />
+          {children}
         </Providers>
       </body>
     </html>
   );
 }
+
+export default RootLayout

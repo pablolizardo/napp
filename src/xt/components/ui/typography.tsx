@@ -15,7 +15,7 @@ export function TypographyH1({ children, className }: { children: ReactNode, cla
 
 export function TypographyH2({ children, className }: { children: ReactNode, className?: string }) {
     return (
-        <h2 className={cn(`text-balance scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0`, className)}>
+        <h2 className={cn(`text-balance scroll-m-20  pb-2 text-4xl lg:text-5xl font-semibold tracking-tight transition-colors first:mt-0`, className)}>
             {children}
         </h2>
     )

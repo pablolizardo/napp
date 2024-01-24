@@ -17,16 +17,27 @@
     ".babel.rc": true,
     "bun.lockb": true,
     "package-lock.json": true,
-    ".vscode": true
+    ".vscode": true,
+    "jest.config.js": true,
+    "components.json": true,
+    "next.config.mjs": true,
+    "package.json": true
+    // "tailwind.config.ts": true,
   },
-  "folder-path-color.folders": [
-    { "path": "src/xt", "symbol": "XT", "tooltip": "Common", "color": "green" }
-  ],
-  "folder-color.pathColors": [
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    
+},
+"editor.quickSuggestions": {
+    "strings": true
+},
+ "json.schemas": [
+    "xt.config.schema.json",
     {
-      "folderPath": "xt/",
-      "color": "foldercolorizer.Gold",
-      "badge": "xt"
+      "fileMatch": ["xt.config.json"],
+      "url": "/Users/pablo.lizardo/Code/xt/xt.config.schema.json"
     }
-  ]
+  ],
 }

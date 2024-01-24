@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -10,7 +14,6 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +22,22 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/xt/templates/features/databases/mongodb.js", "src/xt/templates/features/databases/firebase.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/xt/templates/features/databases/mongodb.js",
+    "src/xt/templates/features/databases/firebase.ts",
+    "src/xt/server-actions/tests/pages.test.js"
+, "src/xt/lib/build-pages.mjs", "src/xt/templates/functions/fetch/server.mjs", "src/xt/templates/functions/fetch/client.mjs"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
