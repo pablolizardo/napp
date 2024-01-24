@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "xt": "next dev & node ./src/xt/lib/watch-config-changes.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "watch-config": "node src/xt/scripts/watch-config.js",
+    "xt": "clear & npm run dev & npm run watch-config"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",

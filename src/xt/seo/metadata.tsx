@@ -1,6 +1,7 @@
 import { Metadata } from "next";
+import xtConfig from "..";
 
 export const root: Metadata = {
-    title: "@xt-app-name",
-    description: "@xt-app-description",
+  title: xtConfig.appName,
+  description: xtConfig.appDescription,
 };

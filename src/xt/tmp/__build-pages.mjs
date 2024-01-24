@@ -1,5 +1,6 @@
 // import { mkdir, readFile, writeFile } from "fs/promises";
 // import { generateSlug } from ".";
+import { readFile } from "fs/promises";
 import {
   fetchClientFunctionSign,
   fetchClientImports,
@@ -10,10 +11,17 @@ import {
   fetchServerInsidePage,
   fetchServerOutside,
 } from "../templates/functions/fetch/server.mjs";
-import xtConfig from "./../../../xt.config.json?type=json";
+// import xtConfig from "./../../../xt.config.json?type=json";
+import { spawn } from "child_process";
 
-const main = () => {
+const buildPages = async () => {
+  const child = spawn(command, args);
+  const config = await readFile("xt.config.json");
+  console.log("config", config);
+  await mkdir(`src/app/(site)/config`, { recursive: true });
+  return config;
   const pages = xtConfig.pages;
+  console.log("building", pages);
   pages.forEach(async (page) => {
     const sanitizedName = generateSlug(page.name);
     await mkdir(`src/app/(site)/${sanitizedName}`, { recursive: true });
@@ -85,7 +93,7 @@ const main = () => {
     }
   });
 };
-export default main;
+export default buildPages;
 
 export function generateSlug(inputString) {
   const sanitizedString = removeAccents(inputString)

@@ -3,7 +3,7 @@
   "appDescription": "Ship your startupin days,not weeks",
   "styling": {
     "theme": "yellow",
-    "rounded": "1rem",
+    "rounded": ".5rem",
     "baseSize": ".4rem",
     "gap": "1",
     "sectionGap": "2"
@@ -76,39 +76,15 @@
   },
   "pages": [
     {
-      "name": "test",
+      "slug": "fetch",
+      "name": "fetch",
+      "fetchData": "server"
+    },
+    {
+      "slug": "faq",
+      "name": "Preguntas frecuentes",
       "fetchData": "server",
-      "loading": true,
-      "error": true,
-      "template": "pricing"
-    },
-    {
-      "name": "dashboard",
-      "fetchData": "none",
-      "loading": true,
-      "error": true,
-      "template": "dashboard"
-    },
-    {
-      "name": "cards",
-      "fetchData": "client",
-      "loading": false,
-      "error": false,
-      "template": "cards"
-    },
-    {
-      "name": "pricing",
-      "fetchData": "client",
-      "loading": false,
-      "error": false,
-      "template": "pricing"
-    },
-    {
-      "name": "login",
-      "fetchData": "server",
-      "loading": true,
-      "error": true,
-      "template": "login"
+      "template": "faq"
     }
   ]
 }

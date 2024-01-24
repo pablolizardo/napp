@@ -34,9 +34,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/xt/templates/features/databases/mongodb.js",
-    "src/xt/templates/features/databases/firebase.ts",
-    "src/xt/server-actions/tests/pages.test.js"
-, "src/xt/lib/build-pages.mjs", "src/xt/templates/functions/fetch/server.mjs", "src/xt/templates/functions/fetch/client.mjs"  ],
+    "src/xt/templates/features/databases/firebase.ts"
+, "src/xt/templates/functions/fetch/server.js", "src/xt/templates/functions/fetch/client.js"  ],
   "exclude": [
     "node_modules"
   ]

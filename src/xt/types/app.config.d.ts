@@ -9,12 +9,13 @@ export default interface xtConfig {
 
 export interface xtPage {
     name: string;
-    loading: boolean;
-    error: boolean;
-    fetchData: string;
-    revalidatePattern: string;
-    generateStaticPaths: string;
-    template: string;
+    slug: string;
+    loading?: boolean;
+    error?: boolean;
+    fetchData?: 'client' | 'server';
+    revalidatePattern?: string;
+    generateStaticPaths?: string;
+    template?: string;
 }
 
 export interface xtFeatures {

@@ -2,9 +2,9 @@ import { statSync, } from "fs";
 import { mkdir, readFile, readdir, rm, rmdir, writeFile } from "fs/promises";
 import path from "path";
 import { generateSlug } from "../lib/utils";
-import { fetchClientFunctionSign, fetchClientImports, fetchClientInsidePage } from "../templates/functions/fetch/client.mjs";
-import { fetchServerFunctionSign, fetchServerInsidePage, fetchServerOutside } from "../templates/functions/fetch/server.mjs";
-import { addPageToConfig, removeAllPagesFromConfig } from "./config";
+import { fetchClientFunctionSign, fetchClientImports, fetchClientInsidePage } from "../templates/functions/fetch/client.js";
+import { fetchServerFunctionSign, fetchServerInsidePage, fetchServerOutside } from "../templates/functions/fetch/server.js";
+import { addPageToConfig, removeAllPagesFromConfig } from "../server-actions/config";
 
 export const handleAddPage = async (formData: FormData) => {
     'use server'
