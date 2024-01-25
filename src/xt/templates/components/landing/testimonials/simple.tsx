@@ -1,9 +1,9 @@
 import { TypographyH2, TypographyLarge, TypographyMuted } from "@/xt/components/ui/typography";
-import { xtGap, xtSectionGap } from "@/xt/lib/styling";
+import { xtGap } from "@/xt/lib/styling";
 
 const Testimonials = () => {
 
-    return <section className="grid justify-center " style={xtSectionGap}>
+    return <section className="grid justify-center " style={xtGap}>
         <TypographyH2>Testimonials</TypographyH2>
         <TypographyLarge>Nulla nisi enim tempor proident do laborum cupidatat mollit nulla nisi.</TypographyLarge>
 

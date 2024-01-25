@@ -2,13 +2,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/xt/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/xt/components/ui/card";
 import { TypographyH2, TypographyLarge } from "@/xt/components/ui/typography";
 import xtConfig from "@/xt/lib/config";
-import { xtGap, xtSectionGap } from "@/xt/lib/styling";
+import { xtGap } from "@/xt/lib/styling";
 
 /* eslint-disable @next/next/no-img-element */
 const Testimonials = () => {
 
     return (
-        <section className="w-full max-w-6xl mx-auto" style={xtSectionGap}>
+        <section className="w-full max-w-6xl mx-auto" style={xtGap}>
             <div>
                 <TypographyH2 > What people are saying. </TypographyH2>
                 <TypographyLarge className="mx-auto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </TypographyLarge>

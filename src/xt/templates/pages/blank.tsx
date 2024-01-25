@@ -1,15 +1,21 @@
 //@xt-use-client
 
+import { TypographyH1, TypographyLarge } from "@/xt/components/ui/typography";
+import xtConfig from "@/xt/lib/config";
+
 //@xt-imports
 //@xt-fetch-outside
 
 const Page = () => {
     //@xt-fetch-inside
-    return <div>
-        <h1>{/*@xt-app-name*/}</h1>
-        <p className="">
-            Veniam laborum culpa ut sit est quis sint sunt sunt mollit non. Dolor anim quis elit magna. Pariatur tempor officia mollit anim velit adipisicing occaecat elit sunt adipisicing veniam irure in. Labore consectetur consequat incididunt voluptate sint. Aliquip cupidatat occaecat quis nisi duis. Aute minim ipsum dolor laboris nisi. Mollit cupidatat laboris nulla esse eu in officia occaecat consequat duis irure deserunt est.
-        </p>
-    </div>;
+
+    return <section className="mx-auto max-w-7xl p-3 flex flex-col gap-3">
+        <TypographyH1>
+            {xtConfig.appName}
+        </TypographyH1>
+        <TypographyLarge>
+            {xtConfig.appDescription}
+        </TypographyLarge>
+    </section>;
 }
 export default Page

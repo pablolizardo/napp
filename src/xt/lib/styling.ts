@@ -8,5 +8,5 @@ export const xtGlobalStyles = {
 
 export const xtGap = { gap: xtConfig.styling.gap } as CSSProperties
 
-export const xtSectionGap = { marginBlock: xtConfig.styling.sectionGap } as CSSProperties
+export const xtSectionGap = { gap: xtConfig.styling.sectionGap } as CSSProperties
 

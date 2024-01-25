@@ -15,7 +15,7 @@ const Page = () => {
     //@xt-fetch-inside
 
     return (
-        <section className="mx-auto flex max-w-[980px] flex-col items-center  gap-2" style={xtSectionGap}>
+        <section className="mx-auto flex max-w-[980px] flex-col items-center  gap-2" style={xtGap}>
             <Badge className="text-sm font-medium gap-2" variant={'secondary'} >
                 🎉
                 <span className="sm:hidden">New components and more.</span>

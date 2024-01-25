@@ -1,6 +1,7 @@
 //@xt-imports
 
 import xtConfig from "@/xt/lib/config";
+import { xtSectionGap } from "@/xt/lib/styling";
 import React from "react";
 
 const Home = async () => {
@@ -10,7 +11,7 @@ const Home = async () => {
   const Team = React.lazy(() => import(`@/xt/templates/components/landing/team/${xtConfig.components.landing.team}.tsx`))
   const Pricing = React.lazy(() => import(`@/xt/templates/components/landing/pricing/${xtConfig.components.landing.pricing}.tsx`))
   return (
-    <main className="grid justify-center text-center items-center  p-24">
+    <main className="grid justify-center text-center items-center  p-24" style={xtSectionGap}>
       <Hero />
       <Testimonial />
       <Team />

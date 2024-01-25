@@ -72,7 +72,6 @@ const generate = async () => {
                 {
                     "type": "object",
                     "properties": {
-                        "showInMenu": { type: "boolean", default: true },
                         "template": { type: "string", enum: getArray(pages) },
                         "slug": { "type": "string" },
                         "name": { "type": "string" },
@@ -80,9 +79,11 @@ const generate = async () => {
                         "error": { "type": "boolean" },
                         "fetchData": { "type": "string", "enum": ["client", "server", "none"] },
                         "revalidatePattern": { "type": "string" },
-                        "generateStaticPaths": { "type": "string" }
+                        "generateStaticPaths": { "type": "string" },
+                        "hidden": { type: "boolean", default: false },
+                        "lock": { type: "boolean", default: true }
                     },
-                    required: ['template', 'slug', 'name', 'showInMenu']
+                    required: ['name']
                 }
 
             },

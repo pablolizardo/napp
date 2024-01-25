@@ -1,19 +1,16 @@
-// Hero.js
-import xtConfig from '@/xt/lib/config';
 import { Button } from '@/xt/components/ui/button';
-import { xtSectionGap } from '@/xt/lib/styling';
-import React from 'react';
+import { TypographyH1, TypographyLarge } from '@/xt/components/ui/typography';
+import xtConfig from '@/xt/lib/config';
+import { xtGap } from '@/xt/lib/styling';
 
 const Hero = () => {
     return (
-        <div className="bg-background text-foreground " style={xtSectionGap}>
-            <div className="container mx-auto text-center">
-                <h1 className="text-4xl font-bold mb-4">{xtConfig.appName}</h1>
-                <p className="text-lg mb-8">Descubre todo lo que tenemos para ofrecerte.</p>
-                <Button>
-                    Empezar
-                </Button>
-            </div>
+        <div className=" mx-auto text-center flex flex-col " style={xtGap}>
+            <TypographyH1 className="text-4xl font-bold mb-4">{xtConfig.appName}</TypographyH1>
+            <TypographyLarge>Descubre todo lo que tenemos para ofrecerte.</TypographyLarge>
+            <Button variant={'default'}>
+                ⚡️ Start Building
+            </Button>
         </div>
     );
 };

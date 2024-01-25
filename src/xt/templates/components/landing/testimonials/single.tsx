@@ -1,9 +1,9 @@
-import { xtSectionGap } from "@/xt/lib/styling";
+import { xtGap } from "@/xt/lib/styling";
 
 /* eslint-disable @next/next/no-img-element */
 export default function Example() {
     return (
-        <section className="relative isolate overflow-hidden  px-6  lg:px-8" style={xtSectionGap}>
+        <section className="relative isolate overflow-hidden  px-6  lg:px-8" style={xtGap}>
             <div className="mx-auto max-w-2xl lg:max-w-4xl">
 
                 <figure className="mt-10">

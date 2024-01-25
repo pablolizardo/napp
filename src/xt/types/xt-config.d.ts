@@ -81,8 +81,7 @@ export interface XtConfig {
   };
   mode?: "server" | "client" | "none";
   pages: {
-    showInMenu: boolean;
-    template:
+    template?:
       | "blank"
       | "cards"
       | "contact"
@@ -94,13 +93,15 @@ export interface XtConfig {
       | "player"
       | "pricing"
       | "product";
-    slug: string;
+    slug?: string;
     name: string;
     loading?: boolean;
     error?: boolean;
     fetchData?: "client" | "server" | "none";
     revalidatePattern?: string;
     generateStaticPaths?: string;
+    hidden?: boolean;
+    lock?: boolean;
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

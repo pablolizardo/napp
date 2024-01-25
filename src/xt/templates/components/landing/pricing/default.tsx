@@ -4,7 +4,7 @@ import {
   TypographyLarge,
   TypographySmall,
 } from "@/xt/components/ui/typography";
-import { xtSectionGap } from "@/xt/lib/styling";
+import { xtGap } from "@/xt/lib/styling";
 import { Check } from "lucide-react";
 
 const includedFeatures = [
@@ -16,7 +16,7 @@ const includedFeatures = [
 
 export default function Example() {
   return (
-    <div style={xtSectionGap}>
+    <div style={xtGap}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <TypographyH2>Simple no-tricks pricing</TypographyH2>

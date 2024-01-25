@@ -2,6 +2,7 @@ import ThemeSwitcher from "@/xt/components/generics/theme-switcher";
 import { Button } from "@/xt/components/ui/button";
 import xtConfig from "@/xt/lib/config";
 import { xtGap } from "@/xt/lib/styling";
+import { generateSlug } from "@/xt/lib/utils";
 import { Cog } from "lucide-react";
 import Link from "next/link";
 
@@ -16,9 +17,9 @@ const Header = async () => {
         </Link>
         <nav className="flex flex-wrap" style={xtGap}>
           {xtConfig.pages
-            .filter((page) => page.showInMenu)
+            .filter((page) => !page.hidden)
             .map((page) => (
-              <Link href={page.slug} key={page.name}>
+              <Link href={page.slug || generateSlug(page.name)} key={page.name}>
                 <Button variant={"ghost"} className="capitalize">
                   {page.name}
                 </Button>

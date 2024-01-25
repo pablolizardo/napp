@@ -3,11 +3,10 @@
   "appName": "XT",
   "appDescription": "Ship your startupin days,not weeks",
   "styling": {
-    "baseSize": "0.5rem",
-    "theme": "pale-blue",
-    "rounded": "0.75rem",
-    "gap": "0.875rem",
-    "sectionGap": "3rem"
+    "theme": "rose",
+    "gap": "0.5rem",
+    "rounded": "0.625rem",
+    "sectionGap": "9rem"
   },
   "features": [
     {
@@ -18,12 +17,12 @@
     {
       "name": "i18n",
       "label": "i18n",
-      "active": false
+      "active": true
     },
     {
       "name": "mail",
       "label": "Mail",
-      "active": false
+      "active": true
     },
     {
       "name": "database",
@@ -66,7 +65,7 @@
     "footer": "minimal",
     "landing": {
       "hero": "minimal",
-      "testimonials": "cards",
+      "testimonials": "simple",
       "FAQ": null,
       "pricing": "default",
       "features": null,
@@ -77,36 +76,18 @@
   },
   "pages": [
     {
-      "name": "team",
-      "template": "player",
-      "slug": "team",
-      "showInMenu": true,
-      "fetchData": "server"
-    },
-    {
-      "slug": "pricing",
-      "name": "pricing",
-      "template": "pricing",
-      "loading": true,
-      "fetchData": "server",
-      "showInMenu": true
-    },
-    {
-      "error": false,
-      "generateStaticPaths": "",
-      "loading": false,
-      "revalidatePattern": "",
-      "slug": "test",
-      "name": "test",
+      "name": "Contact",
       "template": "contact",
-      "fetchData": "none",
-      "showInMenu": true
+      "fetchData": "server",
+      "loading": true,
+      "error": true,
+      "lock": true
     },
     {
-      "name": "Admin",
-      "slug": "admin",
-      "showInMenu": true,
-      "template": "dashboard"
+      "name": "Nuestros precios",
+      "slug": "prciing",
+      "template": "pricing",
+      "hidden": false
     }
   ],
   "content": {
