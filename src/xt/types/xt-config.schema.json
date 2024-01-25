@@ -173,7 +173,7 @@
         "properties": {
           "showInMenu": {
             "type": "boolean",
-            "default": "true"
+            "default": true
           },
           "template": {
             "type": "string",

@@ -1,6 +1,18 @@
-//@xt-use-client
-//@xt-imports
-//@xt-fetch-outside
+
+
+async function getData() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+
+    if (!res.ok) {
+        // This will activate the closest 'error.js' Error Boundary
+        throw new Error('Failed to fetch data')
+    }
+
+    return res.json()
+}
+
 
 import xtConfig from "@/xt/lib/config";
 import { Button } from "@/xt/components/ui/button";
@@ -9,8 +21,8 @@ import { xtGap } from "@/xt/lib/styling";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/xt/components/ui/card";
 import { Check } from "lucide-react";
 
-const Page = () => {
-  //@xt-fetch-inside
+const Page = async () => {
+  const data = await getData()
   return (
     <div className="p-3 mx-auto max-w-6xl flex flex-col " style={xtGap}>
       <header>

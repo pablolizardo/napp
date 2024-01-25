@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "test": "clear & jest",
-    "xt:watch": "node src/xt/scripts/watch-config.js & npm run xt:generate",
-    "xt:dev": "clear & npm run dev & npm run xt:watch",
-    "xt:generate": "clear & node src/xt/scripts/generate-model.js"
+    "xt:restart": "sh src/xt/scripts/restart-servers.sh",
+    "xt:watch": "node src/xt/scripts/watch-config.js",
+    "xt:generate": "node src/xt/scripts/generate-model.js",
+    "xt": "clear & node src/xt/scripts/generate-model.js & npm run dev & npm run xt:watch"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",

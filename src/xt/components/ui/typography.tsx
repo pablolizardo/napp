@@ -5,7 +5,7 @@ import { ReactNode } from "react"
 export function TypographyH1({ children, className }: { children: ReactNode, className?: string }) {
     return (
         <h1 className={cn(`
-        scroll-m-20 text-balance text-4xl tracking-tighter md:text-5xl lg:leading-[1.1] lg:text-6xl
+        scroll-m-20 text-balance text-5xl tracking-tighter md:text-6xl lg:leading-[1.1] lg:text-7xl
          font-bold leading-tight  
         `, className)}>
             {children}

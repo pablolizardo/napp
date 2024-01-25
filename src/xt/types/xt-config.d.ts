@@ -81,7 +81,7 @@ export interface XtConfig {
   };
   mode?: "server" | "client" | "none";
   pages: {
-    showInMenu: boolean & string;
+    showInMenu: boolean;
     template:
       | "blank"
       | "cards"

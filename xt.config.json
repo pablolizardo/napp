@@ -3,11 +3,11 @@
   "appName": "XT",
   "appDescription": "Ship your startupin days,not weeks",
   "styling": {
-    "baseSize": "0.25rem",
-    "theme": "violet",
-    "rounded": "0.5rem",
-    "gap": "0.625rem",
-    "sectionGap": "6rem"
+    "baseSize": "0.5rem",
+    "theme": "pale-blue",
+    "rounded": "0.75rem",
+    "gap": "0.875rem",
+    "sectionGap": "3rem"
   },
   "features": [
     {
@@ -77,6 +77,21 @@
   },
   "pages": [
     {
+      "name": "team",
+      "template": "player",
+      "slug": "team",
+      "showInMenu": true,
+      "fetchData": "server"
+    },
+    {
+      "slug": "pricing",
+      "name": "pricing",
+      "template": "pricing",
+      "loading": true,
+      "fetchData": "server",
+      "showInMenu": true
+    },
+    {
       "error": false,
       "generateStaticPaths": "",
       "loading": false,
@@ -95,55 +110,107 @@
     }
   ],
   "content": {
-    "team": "",
-    "testimonials": "",
+    "team": [
+      {
+        "name": "Pablo Lizardo",
+        "role": "Founder CEO",
+        "avatar": "https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png"
+      },
+      {
+        "name": "Pamela Gabutti",
+        "role": "Marketing",
+        "avatar": "https://tailone.tailwindtemplate.net/src/img/dummy/avatar3.png"
+      },
+      {
+        "name": "Daniel Emo",
+        "role": "Sales manager",
+        "avatar": "https://tailone.tailwindtemplate.net/src/img/dummy/avatar2.png"
+      },
+      {
+        "name": "Toni Lana",
+        "role": "UI/UX Designer",
+        "avatar": "https://tailone.tailwindtemplate.net/src/img/dummy/avatar4.png"
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Alice Johnson",
+        "image": "https://i.pravatar.cc/100?img=7",
+        "description": "Working with this SAAS platform has been a game-changer for our team. The seamless integration of Next.js, Tailwind CSS, and MongoDB allows us to develop and deploy applications faster than ever. The robust features and user-friendly interface make it an invaluable tool for our projects."
+      },
+      {
+        "name": "John Smith",
+        "image": "https://i.pravatar.cc/100?img=8",
+        "description": "As a developer, I've tried various tech stacks, but the combination of Next.js, Tailwind CSS, and MongoDB in this SAAS framework is exceptional. The flexibility and scalability it provides make it easy to adapt to different project requirements. It's become my go-to solution for building modern and efficient applications."
+      },
+      {
+        "name": "Elena Rodriguez",
+        "image": "https://i.pravatar.cc/100?img=9",
+        "description": "The synergy between Next.js, Tailwind CSS, and MongoDB in this SAAS solution is remarkable. It simplifies the development process and allows us to focus on creating innovative features. The responsive design capabilities of Tailwind CSS combined with the data handling efficiency of MongoDB make it a winning combination for any development team."
+      },
+      {
+        "name": "David Williams",
+        "image": "https://i.pravatar.cc/100?img=10",
+        "description": "Our experience with this SAAS product has been nothing short of fantastic. The integration of Next.js, Tailwind CSS, and MongoDB provides a solid foundation for building robust applications. The speed and efficiency of development have allowed us to meet tight deadlines while delivering high-quality results. Highly recommended!"
+      },
+      {
+        "name": "Sophie Chen",
+        "image": "https://i.pravatar.cc/100?img=11",
+        "description": "I've been using this SAAS platform for a while, and it has exceeded my expectations. The combination of Next.js, Tailwind CSS, and MongoDB offers a modern and streamlined development experience. The ease of deployment and the performance optimizations make it an ideal choice for building scalable and efficient web applications."
+      },
+      {
+        "name": "Mike Anderson",
+        "image": "https://i.pravatar.cc/100?img=12",
+        "description": "This SAAS framework has been a game-changer for our team. The seamless integration of Next.js, Tailwind CSS, and MongoDB has significantly improved our development workflow. The comprehensive documentation and active community support add to the overall positive experience. Truly a powerful tool for building modern web applications."
+      }
+    ],
     "pricing": [
       {
         "title": "Personal",
         "price": "2900",
-        "subscription": "por mes",
-        "description": "Un sitio web sencillo que te permitirá dar a conocer tu producto, servicio o punto de venta.",
+        "subscription": "per month",
+        "description": "A simple website that will allow you to showcase your product, service, or point of sale.",
         "targets": [
-          "Paginas Personales",
-          "Perfiles Profesionales",
-          "Postulaciones Politicas",
-          "Presentaciones de Proyectos"
+          "Personal Pages",
+          "Professional Profiles",
+          "Political Applications",
+          "Project Presentations"
         ],
-        "deliveryTime": "1 semana",
+        "deliveryTime": "1 week",
         "image": "default"
       },
       {
-        "title": "Empresa",
+        "title": "Business",
         "price": "6500",
-        "subscription": "por mes",
-        "description": "Hacé crecer tu negocio o plataforma con esta opción en la que podés administrar el contenido de manera remota.",
+        "subscription": "per month",
+        "description": "Grow your business or platform with this option where you can manage content remotely.",
         "targets": [
-          "Portales de Noticias",
-          "Streamer",
+          "News Portals",
+          "Streamers",
           "Blogs",
-          "Partidos Politicos",
-          "Articulos Personales",
-          "ONGs",
+          "Political Parties",
+          "Personal Articles",
+          "NGOs",
           "Blog"
         ],
-        "deliveryTime": "3 semanas",
+        "deliveryTime": "3 weeks",
         "image": "default"
       },
       {
-        "title": "Corporativo",
+        "title": "Corporate",
         "price": "13100",
-        "subscription": "por mes",
-        "description": "Armá y vende tus productos con una tienda o App. Administrá tu negocio ó empresa con un CRM hecho a medida.",
+        "subscription": "per month",
+        "description": "Build and sell your products with a store or app. Manage your business or company with a custom-built CRM.",
         "targets": [
-          "Inmobiliarias",
-          "App para celular",
-          "Centros de Salud",
-          "CableOperadores",
+          "Real Estate Agencies",
+          "Mobile Apps",
+          "Health Centers",
+          "Cable Operators",
           "CRM",
-          "Alquiler de Vehiculos",
+          "Vehicle Rental",
           "API"
         ],
-        "deliveryTime": "1 mes y medio",
+        "deliveryTime": "1 and a half months",
         "image": "default"
       }
     ]
