@@ -13,8 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/xt/components/ui/select";
-import { handleAddPage } from "@/xt/tmp/pages";
-import xtConfig from "@/xt/types/app.config";
+import { handleAddPage } from "@/xt/_tmp/pages";
+import xtConfig from "@/xt/types/___app.config";
 import { Plus } from "lucide-react";
 
 const CardPages = ({

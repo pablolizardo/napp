@@ -33,11 +33,11 @@
 "editor.quickSuggestions": {
     "strings": true
 },
- "json.schemas": [
-    "xt.config.schema.json",
-    {
-      "fileMatch": ["xt.config.json"],
-      "url": "/Users/pablo.lizardo/Code/xt/xt.config.schema.json"
-    }
-  ],
+"json.schemas": [
+  {
+      "fileMatch": ["./xt.config.json"],
+      "url": "./src/xt/types/xt-config.schema.json"
+  }
+]
+
 }

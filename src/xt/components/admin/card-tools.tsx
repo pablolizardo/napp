@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/xt/components/ui/card";
 import { applyConfig } from "@/xt/utils/apply-config";
-import { handleRemoveAllPages } from "@/xt/tmp/pages";
+import { handleRemoveAllPages } from "@/xt/_tmp/pages";
 import { Check, Trash } from "lucide-react";
 
 const CardTools = () => {

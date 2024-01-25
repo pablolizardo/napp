@@ -1,5 +1,5 @@
 'use server'
-import xtConfig, { xtPage } from "@/xt/types/app.config";
+import xtConfig, { xtPage } from "@/xt/types/___app.config";
 import { readFile, writeFile } from "fs/promises";
 
 const XT_CONFIG_PATHNAME = 'xt.config.json'

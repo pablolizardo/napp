@@ -62,7 +62,7 @@
   ],
   "components": {
     "navbar": "default",
-    "footer": "links",
+    "footer": "app",
     "landing": {
       "hero": "minimal",
       "testimonials": "cards",
@@ -76,15 +76,79 @@
   },
   "pages": [
     {
-      "slug": "fetch",
-      "name": "fetch",
-      "fetchData": "server"
+      "slug": "home",
+      "name": "Landing site",
+      "fetchData": "client",
+      "loading": false,
+      "error": true,
+      "template": "pricing",
+      "showInMenu": true
     },
     {
-      "slug": "faq",
-      "name": "Preguntas frecuentes",
+      "slug": "store",
+      "name": "ECommerce",
+      "template": "product",
+      "showInMenu": true
+    },
+    {
+      "slug": "admin",
+      "name": "dashboard page",
       "fetchData": "server",
-      "template": "faq"
+      "template": "dashboard"
     }
-  ]
+  ],
+  "content": {
+    "team": "",
+    "testimonials": "",
+    "pricing": [
+      {
+        "title": "Personal",
+        "price": "2900",
+        "subscription": "por mes",
+        "description": "Un sitio web sencillo que te permitirá dar a conocer tu producto, servicio o punto de venta.",
+        "targets": [
+          "Paginas Personales",
+          "Perfiles Profesionales",
+          "Postulaciones Politicas",
+          "Presentaciones de Proyectos"
+        ],
+        "deliveryTime": "1 semana",
+        "image": "default"
+      },
+      {
+        "title": "Empresa",
+        "price": "6500",
+        "subscription": "por mes",
+        "description": "Hacé crecer tu negocio o plataforma con esta opción en la que podés administrar el contenido de manera remota.",
+        "targets": [
+          "Portales de Noticias",
+          "Streamer",
+          "Blogs",
+          "Partidos Politicos",
+          "Articulos Personales",
+          "ONGs",
+          "Blog"
+        ],
+        "deliveryTime": "3 semanas",
+        "image": "default"
+      },
+      {
+        "title": "Corporativo",
+        "price": "13100",
+        "subscription": "por mes",
+        "description": "Armá y vende tus productos con una tienda o App. Administrá tu negocio ó empresa con un CRM hecho a medida.",
+        "targets": [
+          "Inmobiliarias",
+          "App para celular",
+          "Centros de Salud",
+          "CableOperadores",
+          "CRM",
+          "Alquiler de Vehiculos",
+          "API"
+        ],
+        "deliveryTime": "1 mes y medio",
+        "image": "default"
+      }
+    ]
+  }
 }

@@ -1,30 +1,15 @@
-const Page = () => {
+const Footer = () => {
     return <footer className="footer_footer__mqdak">
         <div className="footer_grid__yp2LW">
             <div
                 className="stack_stack__iZkUS stack"
                 data-version="v1"
-                style="
-        --stack-flex: initial;
-        --stack-direction: row;
-        --stack-align: stretch;
-        --stack-justify: space-between;
-        --stack-padding: 0px;
-        --stack-gap: 0px;
-      "
-                data-logo="true"
+
             >
                 <a
                     className="stack_stack__iZkUS stack"
                     data-version="v1"
-                    style="
-          --stack-flex: initial;
-          --stack-direction: column;
-          --stack-align: stretch;
-          --stack-justify: flex-start;
-          --stack-padding: 0px;
-          --stack-gap: 0px;
-        "
+
                     aria-label="Vercel"
                     data-logo-link=""
                     href="https://vercel.com/home?utm_source=next-site&amp;utm_medium=footer&amp;utm_campaign=next-website"
@@ -40,14 +25,7 @@ const Page = () => {
                 <div
                     className="stack_stack__iZkUS stack footer_socials__VfDh3"
                     data-version="v1"
-                    style="
-          --stack-flex: initial;
-          --stack-direction: row;
-          --stack-align: center;
-          --stack-justify: flex-start;
-          --stack-padding: 0px;
-          --stack-gap: 12px;
-        "
+
                     data-socials-mobile="true"
                 >
                     <a
@@ -139,7 +117,7 @@ const Page = () => {
             <div>
                 <h4>
                     About
-                    <!-- -->Vercel
+                    Vercel
                 </h4>
                 <a
                     href="https://vercel.com/solutions/nextjs?utm_source=next-site&amp;utm_medium=footer&amp;utm_campaign=showcase"
@@ -169,8 +147,7 @@ const Page = () => {
                     href="https://vercel.com/legal/privacy-policy"
                     rel="noopener"
                     target="_blank"
-                >Privacy Policy</a
-                ><button id="fides-modal-link" type="button">Cookie Preferences</button>
+                >Privacy Policy</a ><button id="fides-modal-link" type="button">Cookie Preferences</button>
             </div>
             <div className="footer_newsletter__GlFxe">
                 <h4>Subscribe to our newsletter</h4>
@@ -182,7 +159,6 @@ const Page = () => {
                         aria-label="Enter your email"
                         data-1p-ignore="true"
                         placeholder="you@domain.com"
-                        required=""
                         type="email"
                         name="email"
                     /><button type="submit">Subscribe</button>
@@ -192,43 +168,22 @@ const Page = () => {
         <div
             className="stack_stack__iZkUS stack footer_copyright__z9dsS"
             data-version="v1"
-            style="
-      --stack-flex: initial;
-      --stack-direction: row;
-      --stack-align: center;
-      --stack-justify: space-between;
-      --stack-padding: 0px;
-      --stack-gap: 0px;
-    "
+
         >
             <div
                 className="stack_stack__iZkUS stack"
                 data-version="v1"
-                style="
-        --stack-flex: initial;
-        --stack-direction: column;
-        --stack-align: stretch;
-        --stack-justify: flex-start;
-        --stack-padding: 0px;
-        --stack-gap: 16px;
-      "
+
             >
                 <p>
                     ©
-                    <!-- -->2024<!-- -->
-                    <!-- -->Vercel<!-- -->, Inc.
+                    2024
+                    Vercel, Inc.
                 </p>
                 <div
                     className="stack_stack__iZkUS stack footer_socials__VfDh3"
                     data-version="v1"
-                    style="
-          --stack-flex: initial;
-          --stack-direction: row;
-          --stack-align: center;
-          --stack-justify: flex-start;
-          --stack-padding: 0px;
-          --stack-gap: 12px;
-        "
+
                     data-socials-desktop="true"
                 >
                     <a
@@ -284,3 +239,5 @@ const Page = () => {
     </footer>
 
 }
+
+export default Footer
