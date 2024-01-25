@@ -1,5 +1,5 @@
 import { readdir } from "fs/promises"
-import { XT_TEMPLATES_PATHNAME } from "../lib/constants"
+import { XT_TEMPLATES_PATHNAME } from "../../lib/constants"
 
 export type ThemeInterface = {
     name: string;

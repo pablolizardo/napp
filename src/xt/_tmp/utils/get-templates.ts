@@ -1,7 +1,7 @@
 import { statSync } from "fs"
 import { readdir } from "fs/promises"
 import path from "path"
-import { XT_TEMPLATES_PATHNAME } from "../lib/constants"
+import { XT_TEMPLATES_PATHNAME } from "../../lib/constants"
 
 export type PageTemplateInterface = {
     name: string;

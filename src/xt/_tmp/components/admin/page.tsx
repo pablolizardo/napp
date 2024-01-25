@@ -1,5 +1,5 @@
-import { getComponentsTemplates, getPagesTemplates } from "@/xt/utils/get-templates";
-import { getThemes } from "@/xt/utils/get-themes";
+import { getComponentsTemplates, getPagesTemplates } from "@/xt/_tmp/utils/get-templates";
+import { getThemes } from "@/xt/_tmp/utils/get-themes";
 import CardFeatures from "./card-features";
 import CardLanding from "./card-landing";
 import CardPages from "./card-pages";
