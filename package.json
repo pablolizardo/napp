@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "xt:watch": "node src/xt/scripts/watch-config.js",
+    "test": "clear & jest",
+    "xt:watch": "node src/xt/scripts/watch-config.js & npm run xt:generate",
     "xt:dev": "clear & npm run dev & npm run xt:watch",
-    "xt:generate": "node src/xt/scripts/build-model-scheme.js"
+    "xt:generate": "clear & node src/xt/scripts/generate-model.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",

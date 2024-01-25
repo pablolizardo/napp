@@ -1,9 +1,9 @@
-import xtConfig from "@/xt"
+import xtConfig from "@/xt/lib/config"
 import { Button } from "@/xt/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/xt/components/ui/card"
 import { Checkbox } from "@/xt/components/ui/checkbox"
 import { Label } from "@/xt/components/ui/label"
-import { handleUpdateFeatures } from "@/xt/server-actions/features"
+import { handleUpdateFeatures } from "@/xt/_tmp/server-actions/features"
 import { Check } from "lucide-react"
 
 const fetchXTConfig = async () => {

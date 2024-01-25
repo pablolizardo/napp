@@ -1,24 +1,12 @@
 
 /* eslint-disable @next/next/no-img-element */
+//@xt-use-client
+//@xt-imports
+//@xt-fetch-outside
 
 
-async function getData() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users')
-    // The return value is *not* serialized
-    // You can return Date, Map, Set, etc.
-
-    if (!res.ok) {
-        // This will activate the closest 'error.js' Error Boundary
-        throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-}
-
-
-
-const Page = async () => {
-    const data = await getData()
+const Page = () => {
+    //@xt-fetch-inside
     return <section
         className="overflow-hidden rounded-[0.5rem] border bg-background shadow-md md:shadow-xl"
     >

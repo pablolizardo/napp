@@ -2,7 +2,7 @@
 //@xt-imports
 //@xt-fetch-outside
 
-import xtConfig from "@/xt";
+import xtConfig from "@/xt/lib/config";
 import { Button } from "@/xt/components/ui/button";
 import { TypographyH1, TypographyLarge } from "@/xt/components/ui/typography";
 

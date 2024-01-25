@@ -1,8 +1,7 @@
-import xtConfig from "@/xt";
+import xtConfig from "@/xt/lib/config";
 import ThemeSwitcher from "@/xt/components/generics/theme-switcher";
 import { Button } from "@/xt/components/ui/button";
 import { xtGap } from "@/xt/lib/styling";
-import { xtPage } from "@/xt/types/___app.config";
 import { Code, Cog } from "lucide-react";
 import Link from "next/link";
 
@@ -30,8 +29,8 @@ const Header = async () => {
         <div className="flex flex-wrap" style={xtGap}>
           <ThemeSwitcher />
           <Link href={"/admin"}>
-            <Button variant={"ghost"}>
-              <Cog className="w-5 h-5" />
+            <Button variant={"ghost"} size={'icon'}>
+              <Cog />
             </Button>
           </Link>
         </div>

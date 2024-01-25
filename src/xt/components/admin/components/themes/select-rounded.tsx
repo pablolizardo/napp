@@ -3,7 +3,7 @@
 import { Label } from "@/xt/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/xt/components/ui/select";
 import { TypographyMuted } from "@/xt/components/ui/typography";
-import { handleApplyRounded } from "@/xt/server-actions/themes";
+import { handleApplyRounded } from "@/xt/_tmp/server-actions/themes";
 
 const SelectRounded = () => {
     return <div className="grid w-full items-center gap-1.5">

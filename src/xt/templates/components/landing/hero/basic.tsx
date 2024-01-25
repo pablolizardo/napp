@@ -1,5 +1,5 @@
 // Hero.js
-import xtConfig from '@/xt';
+import xtConfig from '@/xt/lib/config';
 import { Button } from '@/xt/components/ui/button';
 import { xtSectionGap } from '@/xt/lib/styling';
 import React from 'react';

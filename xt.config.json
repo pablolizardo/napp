@@ -1,12 +1,13 @@
 {
+  "$schema": "./src/xt/types/xt-config.schema.json",
   "appName": "XT",
   "appDescription": "Ship your startupin days,not weeks",
   "styling": {
-    "theme": "yellow",
-    "rounded": ".5rem",
-    "baseSize": ".4rem",
-    "gap": "1",
-    "sectionGap": "2"
+    "baseSize": "0.25rem",
+    "theme": "violet",
+    "rounded": "0.5rem",
+    "gap": "0.625rem",
+    "sectionGap": "6rem"
   },
   "features": [
     {
@@ -61,8 +62,8 @@
     }
   ],
   "components": {
-    "navbar": "default",
-    "footer": "app",
+    "header": "menubar",
+    "footer": "minimal",
     "landing": {
       "hero": "minimal",
       "testimonials": "cards",
@@ -76,24 +77,20 @@
   },
   "pages": [
     {
-      "slug": "home",
-      "name": "Landing site",
-      "fetchData": "client",
+      "error": false,
+      "generateStaticPaths": "",
       "loading": false,
-      "error": true,
-      "template": "pricing",
+      "revalidatePattern": "",
+      "slug": "test",
+      "name": "test",
+      "template": "contact",
+      "fetchData": "none",
       "showInMenu": true
     },
     {
-      "slug": "store",
-      "name": "ECommerce",
-      "template": "product",
-      "showInMenu": true
-    },
-    {
+      "name": "Admin",
       "slug": "admin",
-      "name": "dashboard page",
-      "fetchData": "server",
+      "showInMenu": true,
       "template": "dashboard"
     }
   ],

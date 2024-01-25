@@ -4,7 +4,7 @@ import path from "path";
 import { generateSlug } from "../lib/utils";
 import { fetchClientFunctionSign, fetchClientImports, fetchClientInsidePage } from "../templates/functions/fetch/client.js";
 import { fetchServerFunctionSign, fetchServerInsidePage, fetchServerOutside } from "../templates/functions/fetch/server.js";
-import { addPageToConfig, removeAllPagesFromConfig } from "../server-actions/config";
+import { addPageToConfig, removeAllPagesFromConfig } from "./server-actions/config";
 
 export const handleAddPage = async (formData: FormData) => {
     'use server'

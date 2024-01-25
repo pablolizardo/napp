@@ -3,7 +3,7 @@
 import { Label } from "@/xt/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/xt/components/ui/select";
 import { TypographyMuted } from "@/xt/components/ui/typography";
-import { handleApplySpacing } from "@/xt/server-actions/themes";
+import { handleApplySpacing } from "@/xt/_tmp/server-actions/themes";
 
 const SelectSpacing = () => {
     return <div className="grid w-full items-center gap-1.5">

@@ -1,7 +1,7 @@
 
 'use client'
 
-import xtConfig from '@/xt'
+import xtConfig from '@/xt/lib/config'
 import { ThemeProvider } from 'next-themes'
 import { ReactNode } from 'react'
 

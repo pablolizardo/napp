@@ -1,7 +1,7 @@
 
 //@xt-use-client
 
-import xtConfig from "@/xt";
+import xtConfig from "@/xt/lib/config";
 import { Badge } from "@/xt/components/ui/badge";
 import { Button } from "@/xt/components/ui/button";
 import { TypographyH1, TypographyLarge } from "@/xt/components/ui/typography";

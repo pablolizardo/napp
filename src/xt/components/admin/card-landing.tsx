@@ -2,7 +2,7 @@ import { Button } from "@/xt/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/xt/components/ui/card"
 import { Label } from "@/xt/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/xt/components/ui/select"
-import { handleSetLandingComponent } from "@/xt/server-actions/landing"
+import { handleSetLandingComponent } from "@/xt/_tmp/server-actions/landing"
 
 const CardLanding = ({ landingComponents }: {
   landingComponents: {

@@ -1,6 +1,6 @@
 //@xt-imports
 
-import xtConfig from "@/xt";
+import xtConfig from "@/xt/lib/config";
 import React from "react";
 
 const Home = async () => {

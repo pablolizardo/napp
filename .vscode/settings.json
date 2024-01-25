@@ -21,7 +21,8 @@
     "jest.config.js": true,
     "components.json": true,
     "next.config.mjs": true,
-    "package.json": true
+    "package.json": true,
+    "**/_tmp":true
     // "tailwind.config.ts": true,
   },
   "tailwindCSS.includeLanguages": {

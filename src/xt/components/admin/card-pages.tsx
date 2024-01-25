@@ -14,14 +14,12 @@ import {
   SelectValue,
 } from "@/xt/components/ui/select";
 import { handleAddPage } from "@/xt/_tmp/pages";
-import xtConfig from "@/xt/types/___app.config";
 import { Plus } from "lucide-react";
+import xtConfig from "@/xt/lib/config";
 
 const CardPages = ({
-  config,
   templates,
 }: {
-  config: xtConfig;
   templates: {
     name: string;
     filename: string;
@@ -34,7 +32,7 @@ const CardPages = ({
       </CardHeader>
       <CardContent>
         <form action={handleAddPage} className="grid gap-3">
-          <Input name="name" placeholder={config.appName} required />
+          <Input name="name" placeholder={xtConfig.appName} required />
           <Select name="template" required defaultValue={"page-blank"}>
             <SelectTrigger>
               {" "}

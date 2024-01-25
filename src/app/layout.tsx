@@ -5,7 +5,7 @@ import { root } from "@/xt/seo/metadata";
 import { GeistSans } from "geist/font/sans";
 import React from "react";
 import Header from "./header";
-import xtConfig from "@/xt";
+import xtConfig from "@/xt/lib/config";
 
 export const metadata = root
 

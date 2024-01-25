@@ -8,13 +8,100 @@
 export interface XtConfig {
   appName: string;
   appDescription: string;
-  styling: {
-    theme: string;
-    rounded: string;
-    baseSize: string;
-    gap: string;
-    sectionGap: string;
+  components?: {
+    header?: "default" | "menubar" | "minmal";
+    landing?: {
+      hero?: "basic" | "minimal";
+      testimonials?: "cards" | "simple" | "single";
+      pricing?: "default";
+      team?: "grid";
+      [k: string]: unknown;
+    };
+    footer?: "app" | "avatars" | "columns" | "links" | "minimal";
     [k: string]: unknown;
   };
+  styling: {
+    theme:
+      | "blue"
+      | "gray"
+      | "green"
+      | "neutral"
+      | "orange"
+      | "pale-blue"
+      | "pale-pink"
+      | "red"
+      | "rose"
+      | "slate"
+      | "stone"
+      | "violet"
+      | "xt"
+      | "yellow"
+      | "zinc";
+    rounded:
+      | "0.125rem"
+      | "0.25rem"
+      | "0.375rem"
+      | "0.5rem"
+      | "0.625rem"
+      | "0.75rem"
+      | "0.875rem"
+      | "1rem"
+      | "1.125rem"
+      | "1.25rem"
+      | "1.375rem"
+      | "1.5rem";
+    baseSize:
+      | "0.125rem"
+      | "0.25rem"
+      | "0.375rem"
+      | "0.5rem"
+      | "0.625rem"
+      | "0.75rem"
+      | "0.875rem"
+      | "1rem"
+      | "1.125rem"
+      | "1.25rem"
+      | "1.375rem"
+      | "1.5rem";
+    gap:
+      | "0.125rem"
+      | "0.25rem"
+      | "0.375rem"
+      | "0.5rem"
+      | "0.625rem"
+      | "0.75rem"
+      | "0.875rem"
+      | "1rem"
+      | "1.125rem"
+      | "1.25rem"
+      | "1.375rem"
+      | "1.5rem";
+    sectionGap: "1.5rem" | "3rem" | "6rem" | "9rem" | "12rem" | "15rem" | "18rem";
+    [k: string]: unknown;
+  };
+  mode?: "server" | "client" | "none";
+  pages: {
+    showInMenu: boolean & string;
+    template:
+      | "blank"
+      | "cards"
+      | "contact"
+      | "dashboard"
+      | "datatable"
+      | "faq"
+      | "help"
+      | "login"
+      | "player"
+      | "pricing"
+      | "product";
+    slug: string;
+    name: string;
+    loading?: boolean;
+    error?: boolean;
+    fetchData?: "client" | "server" | "none";
+    revalidatePattern?: string;
+    generateStaticPaths?: string;
+    [k: string]: unknown;
+  }[];
   [k: string]: unknown;
 }

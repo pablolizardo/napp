@@ -1,5 +1,5 @@
 import { writeFile } from "fs/promises"
-import xtConfig from ".."
+import xtConfig from "@/xt/lib/config";
 
 const XT_CONFIG_PATHNAME = 'xt.config.json'
 

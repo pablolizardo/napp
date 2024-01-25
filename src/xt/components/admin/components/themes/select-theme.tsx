@@ -3,7 +3,7 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/xt/components/ui/select";
 import { useFormStatus } from "react-dom";
 import { Loader2 } from "lucide-react";
-import { handleApplyRounded, handleApplyTheme } from "@/xt/server-actions/themes";
+import { handleApplyRounded, handleApplyTheme } from "@/xt/_tmp/server-actions/themes";
 import { Label } from "@/xt/components/ui/label";
 import { TypographyMuted } from "@/xt/components/ui/typography";
 
