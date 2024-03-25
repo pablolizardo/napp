@@ -1,12 +1,12 @@
 {
   "$schema": "./src/xt/types/xt-config.schema.json",
-  "appName": "XT",
+  "appName": "XTjs",
   "appDescription": "Ship your startupin days,not weeks",
   "styling": {
-    "theme": "rose",
-    "gap": "0.5rem",
+    "theme": "yellow",
     "rounded": "0.625rem",
-    "sectionGap": "9rem"
+    "gap": "0.5rem",
+    "sectionGap": "6rem"
   },
   "features": [
     {
@@ -74,22 +74,7 @@
       "map": null
     }
   },
-  "pages": [
-    {
-      "name": "Contact",
-      "template": "contact",
-      "fetchData": "server",
-      "loading": true,
-      "error": true,
-      "lock": true
-    },
-    {
-      "name": "Nuestros precios",
-      "slug": "prciing",
-      "template": "pricing",
-      "hidden": false
-    }
-  ],
+  "pages": [],
   "content": {
     "team": [
       {
@@ -158,23 +143,6 @@
           "Project Presentations"
         ],
         "deliveryTime": "1 week",
-        "image": "default"
-      },
-      {
-        "title": "Business",
-        "price": "6500",
-        "subscription": "per month",
-        "description": "Grow your business or platform with this option where you can manage content remotely.",
-        "targets": [
-          "News Portals",
-          "Streamers",
-          "Blogs",
-          "Political Parties",
-          "Personal Articles",
-          "NGOs",
-          "Blog"
-        ],
-        "deliveryTime": "3 weeks",
         "image": "default"
       },
       {

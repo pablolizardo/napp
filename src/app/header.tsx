@@ -11,7 +11,7 @@ const Header = async () => {
     <header>
       <div className="p-3 justify-between flex flex-wrap" style={xtGap}>
         <Link href={"/"}>
-          <Button variant={"ghost"} className="font-black text-md text-primary">
+          <Button variant={"ghost"} className=" text-md text-primary">
             {xtConfig.appName}
           </Button>
         </Link>
