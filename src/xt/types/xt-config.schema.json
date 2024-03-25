@@ -8,6 +8,9 @@
     "appDescription": {
       "type": "string"
     },
+    "lang": {
+      "type": "string"
+    },
     "components": {
       "type": "object",
       "properties": {

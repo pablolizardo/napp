@@ -8,6 +8,7 @@
 export interface XtConfig {
   appName: string;
   appDescription: string;
+  lang?: string;
   components?: {
     header?: "default" | "menubar" | "minmal";
     landing?: {
