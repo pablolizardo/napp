@@ -1,24 +1,42 @@
-import { getPagesInFolder } from "@/xt/server-actions/pages"
-import { desanitizeSlug } from "@/xt/lib/url"
-import Link from "next/link"
-import { Button } from "@/xt/components/ui/button"
-import { Cog, Home } from "lucide-react"
-import ButtonTheme from "@/xt/components/generics/button-theme"
+import ThemeSwitcher from "@/xt/components/generics/theme-switcher";
+import { Button } from "@/xt/components/ui/button";
+import xtConfig from "@/xt/lib/config";
+import { xtGap } from "@/xt/lib/styling";
+import { generateSlug } from "@/xt/lib/utils";
+import { Cog } from "lucide-react";
+import Link from "next/link";
 
 const Header = async () => {
-    const pages = await getPagesInFolder()
-    return <header >
-        <nav className="p-3 justify-center flex gap-2 flex-wrap" >
-            <Link href={'/'}><Button><Home /></Button></Link>
-            {pages.map(page => <Link href={page} key={page}>
-                <Button className="capitalize">
-                    {desanitizeSlug(page)}
+  return (
+    <header>
+      <div className="p-3 justify-between flex flex-wrap" style={xtGap}>
+        <Link href={"/"}>
+          <Button variant={"ghost"} className=" text-md text-primary">
+            {xtConfig.appName}
+          </Button>
+        </Link>
+        <nav className="flex flex-wrap" style={xtGap}>
+          {xtConfig.pages
+            .filter((page) => !page.hidden)
+            .map((page) => (
+              <Link href={page.slug || generateSlug(page.name)} key={page.name}>
+                <Button variant={"ghost"} className="capitalize">
+                  {page.name}
                 </Button>
-            </Link>)}
-            <Link href={'/create-pages'}><Button className="gap-3"><Cog /> Admin</Button></Link>
-            <ButtonTheme />
+              </Link>
+            ))}
         </nav>
+        <div className="flex flex-wrap" style={xtGap}>
+          <ThemeSwitcher />
+          <Link href={"/admin"}>
+            <Button variant={"ghost"} size={'icon'}>
+              <Cog />
+            </Button>
+          </Link>
+        </div>
+      </div>
     </header>
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,0 +1,14 @@
+/* CUSTOM THEMES */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+body {
+  transition: background 0.6s;
+  accent-color: hsl(var(--primary));
+}

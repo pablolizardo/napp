@@ -1,24 +1,30 @@
-import Header from "./header";
-import { root } from "@/xt/seo/metadata";
-import { Inter } from 'next/font/google'
-import "@/xt/styles/globals.css";
-// import "@/xt/styles/theme.css";
-// import "@/xt/styles/components.css";
+import "@/app/globals.css";
 import { Providers } from "@/xt/components/generics/providers";
+import xtConfig from "@/xt/lib/config";
+import { xtGlobalStyles } from "@/xt/lib/styling";
+import { root } from "@/xt/seo/metadata";
+import { GeistSans } from "geist/font/sans";
+import { Viewport } from "next";
+import React from "react";
+import Header from "./header";
 
 export const metadata = root
+export const viewport: Viewport = { themeColor: 'hsl(var(--secondary))' }
 
-const interFont = Inter({ display: "swap", subsets: ["latin"], variable: "--font-sans" });
+const RootLayout = ({ children, }: Readonly<{ children: React.ReactNode; }>) => {
+  const Footer = React.lazy(() => import(`@/xt/templates/components/footer/${xtConfig.components.footer}.tsx`))
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en" className={`${interFont.className}`} suppressHydrationWarning>
-      <body className="p-5" >
+    <html lang="en" className={`${GeistSans.className} `} suppressHydrationWarning style={xtGlobalStyles}>
+      <body>
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
   );
 }
+
+export default RootLayout
