@@ -19,6 +19,7 @@ const generate = async () => {
         properties: {
             appName: { type: "string" },
             appDescription: { type: 'string' },
+            lang: { type: 'string' },
             "components": {
                 type: "object",
                 properties: {

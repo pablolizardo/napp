@@ -11,7 +11,7 @@ const Home = async () => {
   const Team = React.lazy(() => import(`@/xt/templates/components/landing/team/${xtConfig.components.landing.team}.tsx`))
   const Pricing = React.lazy(() => import(`@/xt/templates/components/landing/pricing/${xtConfig.components.landing.pricing}.tsx`))
   return (
-    <main className="grid justify-center text-center items-center  p-24" style={xtSectionGap}>
+    <main className="grid justify-center text-center items-center p-6 md:p-12 lg:p-24" style={xtSectionGap}>
       <Hero />
       <Testimonial />
       <Team />
