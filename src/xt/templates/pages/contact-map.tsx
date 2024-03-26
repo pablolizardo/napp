@@ -2,7 +2,7 @@ import { Button } from "@/xt/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/xt/components/ui/card"
 import { Input } from "@/xt/components/ui/input"
 import { Textarea } from "@/xt/components/ui/textarea"
-import { TypographyH2, TypographyH3, TypographyLead, TypographyP, TypographySmall } from "@/xt/components/ui/typography"
+import { TypographySmall } from "@/xt/components/ui/typography"
 
 const Contact = () => {
     return <section className="text-gray-400 bg-gray-900 body-font relative">

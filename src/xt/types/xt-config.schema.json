@@ -18,8 +18,12 @@
           "type": "string",
           "enum": [
             "default",
+            "logo-center",
             "menubar",
-            "minmal"
+            "minmal",
+            "nav-center",
+            "nav-left",
+            "nav-right"
           ]
         },
         "landing": {
@@ -29,6 +33,13 @@
               "type": "string",
               "enum": [
                 "basic",
+                "center-social",
+                "full-width",
+                "image-center",
+                "image-left",
+                "image-right-social",
+                "image-right-v2",
+                "image-right",
                 "minimal"
               ]
             },
@@ -36,20 +47,30 @@
               "type": "string",
               "enum": [
                 "cards",
+                "large",
+                "medium",
                 "simple",
-                "single"
+                "single",
+                "small"
               ]
             },
             "pricing": {
               "type": "string",
               "enum": [
-                "default"
+                "cards",
+                "default",
+                "table"
               ]
             },
             "team": {
               "type": "string",
               "enum": [
-                "grid"
+                "circles",
+                "grid",
+                "large",
+                "medium",
+                "members",
+                "small"
               ]
             }
           }
@@ -59,9 +80,13 @@
           "enum": [
             "app",
             "avatars",
+            "centered",
             "columns",
+            "large",
+            "left",
             "links",
-            "minimal"
+            "minimal",
+            "simple"
           ]
         }
       }
@@ -178,12 +203,25 @@
             "type": "string",
             "enum": [
               "blank",
+              "blog",
+              "blog-cards",
+              "blog-cols",
+              "blog-grid",
+              "blog-list",
+              "blog-post",
+              "blog-small",
               "cards",
+              "contact-center",
+              "contact-map-small",
+              "contact-map",
               "contact",
               "dashboard",
               "datatable",
               "faq",
+              "faq",
+              "generics",
               "help",
+              "login",
               "login",
               "player",
               "pricing",

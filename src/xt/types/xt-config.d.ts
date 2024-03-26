@@ -10,15 +10,24 @@ export interface XtConfig {
   appDescription: string;
   lang?: string;
   components?: {
-    header?: "default" | "menubar" | "minmal";
+    header?: "default" | "logo-center" | "menubar" | "minmal" | "nav-center" | "nav-left" | "nav-right";
     landing?: {
-      hero?: "basic" | "minimal";
-      testimonials?: "cards" | "simple" | "single";
-      pricing?: "default";
-      team?: "grid";
+      hero?:
+        | "basic"
+        | "center-social"
+        | "full-width"
+        | "image-center"
+        | "image-left"
+        | "image-right-social"
+        | "image-right-v2"
+        | "image-right"
+        | "minimal";
+      testimonials?: "cards" | "large" | "medium" | "simple" | "single" | "small";
+      pricing?: "cards" | "default" | "table";
+      team?: "circles" | "grid" | "large" | "medium" | "members" | "small";
       [k: string]: unknown;
     };
-    footer?: "app" | "avatars" | "columns" | "links" | "minimal";
+    footer?: "app" | "avatars" | "centered" | "columns" | "large" | "left" | "links" | "minimal" | "simple";
     [k: string]: unknown;
   };
   styling: {
@@ -84,12 +93,25 @@ export interface XtConfig {
   pages: {
     template?:
       | "blank"
+      | "blog"
+      | "blog-cards"
+      | "blog-cols"
+      | "blog-grid"
+      | "blog-list"
+      | "blog-post"
+      | "blog-small"
       | "cards"
+      | "contact-center"
+      | "contact-map-small"
+      | "contact-map"
       | "contact"
       | "dashboard"
       | "datatable"
       | "faq"
+      | "faq"
+      | "generics"
       | "help"
+      | "login"
       | "login"
       | "player"
       | "pricing"

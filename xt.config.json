@@ -12,13 +12,13 @@
   },
   "components": {
     "header": "default",
-    "footer": "minimal",
+    "footer": "large",
     "landing": {
       "hero": "basic",
       "testimonials": "cards",
-      "FAQ": null,
+      "faq": "",
       "pricing": "default",
-      "features": null,
+      "features": "",
       "contact": null,
       "team": "grid",
       "map": null
@@ -28,7 +28,7 @@
     {
       "name": "Contacto",
       "slug": "contact",
-      "template": "contact"
+      "template": "contact-2"
     }
   ],
   "content": {
