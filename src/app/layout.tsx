@@ -15,8 +15,7 @@ const RootLayout = ({ children, }: Readonly<{ children: React.ReactNode; }>) => 
   const Footer = React.lazy(() => import(`@/xt/templates/components/footer/${xtConfig.components.footer}.tsx`))
 
   return (
-    <html lang="en" className={`${GeistSans.className} `}
-      suppressHydrationWarning style={xtGlobalStyles}>
+    <html lang="en" className={`${GeistSans.className} `} suppressHydrationWarning style={xtGlobalStyles}>
       <body>
         <Providers>
           <Header />

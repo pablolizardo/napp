@@ -1,37 +1,64 @@
 {
   "$schema": "./src/xt/types/xt-config.schema.json",
-  "appName": "⚡️ XT",
-  "appDescription": "Ship your startupin days,not weeks",
+  "appName": "XTjs",
+  "appDescription": "Ship your startup in days, not weeks",
+  "appCTAlabel": "⚡️ Let's build!",
   "lang": "en",
   "styling": {
     "theme": "yellow",
     "rounded": "0.625rem",
-    "gap": "0.5rem",
+    "gap": "1.25rem",
     "sectionGap": "6rem",
     "baseSize": "0.5rem"
   },
   "components": {
     "header": "default",
-    "footer": "large",
-    "landing": {
-      "hero": "basic",
-      "testimonials": "cards",
-      "faq": "",
-      "pricing": "default",
-      "features": "",
-      "contact": null,
-      "team": "grid",
-      "map": null
-    }
+    "footer": "minimal",
+    "landing": [
+      "hero/center-social",
+      "features/default",
+      "pricing/default",
+      "team/grid",
+      "testimonials/single",
+      "contact/map",
+      "stats/simple",
+      "logos/simple"
+    ]
   },
-  "pages": [
-    {
-      "name": "Contacto",
-      "slug": "contact",
-      "template": "contact-2"
-    }
-  ],
+  "pages": [],
   "content": {
+    "features": [
+      {
+        "title": "Responsive Design",
+        "content": "Crafted with mobile users in mind, ensuring your website looks stunning on all devices.",
+        "icon": "ResponsiveIcon"
+      },
+      {
+        "title": "Fast Loading Times",
+        "content": "Optimized for speed to keep your visitors engaged and reduce bounce rates.",
+        "icon": "SpeedometerIcon"
+      },
+      {
+        "title": "SEO Friendly",
+        "content": "Boost your search engine rankings with clean, SEO-friendly code and structure.",
+        "icon": "SearchIcon"
+      },
+      {
+        "title": "Customizable",
+        "content": "Tailor your website to fit your brand's unique style and personality.",
+        "icon": "CustomizeIcon"
+      },
+      {
+        "title": "Secure",
+        "content": "Implementing the latest security measures to keep your data and users safe.",
+        "icon": "LockIcon"
+      },
+      {
+        "title": "Scalable",
+        "content": "Built to grow with your business, ensuring your website can handle increased traffic and functionality.",
+        "icon": "ScaleIcon"
+      }
+    ],
     "team": [
       {
         "name": "Pablo Lizardo",
@@ -48,32 +75,38 @@
       {
         "name": "Alice Johnson",
         "image": "https://i.pravatar.cc/100?img=7",
+        "position": "Founder, Acme Co.",
         "description": "Working with this SAAS platform has been a game-changer for our team. The seamless integration of Next.js, Tailwind CSS, and MongoDB allows us to develop and deploy applications faster than ever. The robust features and user-friendly interface make it an invaluable tool for our projects."
       },
       {
-        "name": "John Smith",
+        "name": "Michael Smith",
         "image": "https://i.pravatar.cc/100?img=8",
-        "description": "As a developer, I've tried various tech stacks, but the combination of Next.js, Tailwind CSS, and MongoDB in this SAAS framework is exceptional. The flexibility and scalability it provides make it easy to adapt to different project requirements. It's become my go-to solution for building modern and efficient applications."
+        "position": "CTO, XYZ Tech",
+        "description": "As a tech leader, I've seen a lot of tools come and go, but this one stands out. Its versatility and ease of use are unmatched. We've saved countless hours in development time and our clients are thrilled with the results."
       },
       {
-        "name": "Elena Rodriguez",
+        "name": "Sarah Brown",
         "image": "https://i.pravatar.cc/100?img=9",
-        "description": "The synergy between Next.js, Tailwind CSS, and MongoDB in this SAAS solution is remarkable. It simplifies the development process and allows us to focus on creating innovative features. The responsive design capabilities of Tailwind CSS combined with the data handling efficiency of MongoDB make it a winning combination for any development team."
+        "position": "Marketing Manager, Bright Ideas Inc.",
+        "description": "Our marketing team needed a platform that could keep up with our rapid pace. This tool not only met our expectations but exceeded them. It's intuitive, powerful, and has become an integral part of our workflow."
       },
       {
-        "name": "David Williams",
+        "name": "Chris Wilson",
         "image": "https://i.pravatar.cc/100?img=10",
-        "description": "Our experience with this SAAS product has been nothing short of fantastic. The integration of Next.js, Tailwind CSS, and MongoDB provides a solid foundation for building robust applications. The speed and efficiency of development have allowed us to meet tight deadlines while delivering high-quality results. Highly recommended!"
+        "position": "Lead Developer, Tech Innovations Ltd.",
+        "description": "I've been developing applications for years, and I've never come across a platform as efficient as this one. Its modular approach and extensive documentation make development a breeze. Plus, the support team is top-notch."
       },
       {
-        "name": "Sophie Chen",
+        "name": "Jennifer Lee",
         "image": "https://i.pravatar.cc/100?img=11",
-        "description": "I've been using this SAAS platform for a while, and it has exceeded my expectations. The combination of Next.js, Tailwind CSS, and MongoDB offers a modern and streamlined development experience. The ease of deployment and the performance optimizations make it an ideal choice for building scalable and efficient web applications."
+        "position": "Product Manager, Digital Solutions Co.",
+        "description": "From ideation to execution, this platform streamlines the entire development process. Its collaborative features have improved communication within our team, resulting in faster turnaround times and higher-quality products."
       },
       {
-        "name": "Mike Anderson",
+        "name": "David Garcia",
         "image": "https://i.pravatar.cc/100?img=12",
-        "description": "This SAAS framework has been a game-changer for our team. The seamless integration of Next.js, Tailwind CSS, and MongoDB has significantly improved our development workflow. The comprehensive documentation and active community support add to the overall positive experience. Truly a powerful tool for building modern web applications."
+        "position": "UX/UI Designer, Creative Minds Agency",
+        "description": "As a designer, I appreciate tools that prioritize both functionality and aesthetics. This platform not only meets but exceeds those expectations. Its clean interface and customizable components allow me to bring my designs to life seamlessly."
       }
     ],
     "pricing": [
@@ -144,5 +177,12 @@
       "label": "OG Images",
       "active": false
     }
-  ]
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/xtjs",
+    "github": "https://www.github.com/xtjs",
+    "twitter": "https://www.twitter.com/xtjs",
+    "linkedin": "https://www.linkedin.com/xtjs",
+    "npm": "https://www.npm.com/xtjs"
+  }
 }

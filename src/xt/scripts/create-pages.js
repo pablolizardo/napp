@@ -1,5 +1,5 @@
 const { readFile, mkdir, cp, writeFile } = require("fs/promises");
-const { fetchServerOutside, fetchServerInsidePage, fetchServerFunctionSign } = require('./../templates/functions/fetch/server')
+const { fetchServerOutside, fetchServerInsidePage } = require('./../templates/functions/fetch/server')
 const { fetchClientImports, fetchClientFunctionSign, fetchClientInsidePage } = require('./../templates/functions/fetch/client')
 
 const main = async () => {
@@ -10,7 +10,8 @@ const main = async () => {
       const slug = page.slug || generateSlug(page.name)
       await mkdir(`./src/app/(site)`, { recursive: true });
       await mkdir(`./src/app/(site)/${slug}`, { recursive: true });
-      await cp(`./src/xt/templates/pages/${page.template || "blank"}.tsx`, `./src/app/(site)/${slug}/page.tsx`, { recursive: true, force: true });
+      await cp(`./src/xt/templates/blocks/${page.template}.tsx`,
+        `./src/app/(site)/${slug}/page.tsx`, { recursive: true, force: true });
       if (page.loading) await addGenericToPage(slug, "generics", "loading");
       if (page.error) await addGenericToPage(slug, "generics", "error");
       if (page.fetchData === "client") await addFetchDataInClient(slug)
@@ -22,32 +23,46 @@ const main = async () => {
 module.exports = main;
 
 const addGenericToPage = async (_pageSlug, _folder, _template) => {
-  return await cp(`./src/xt/templates/${_folder}/${_template}.tsx`, `./src/app/(site)/${_pageSlug}/${_template}.tsx`, { recursive: true, force: true });
+  return await cp(`./src/xt/templates/blocks/${_folder}/${_template}.tsx`,
+    `./src/app/(site)/${_pageSlug}/${_template}.tsx`, { recursive: true, force: true });
 };
 
+const addFetchData = async (_pageSlug, fetchDataFunction, replacements) => {
+  console.log(fetchDataFunction.name + ' in ' + (_pageSlug === '' ? 'all' : _pageSlug));
+  const filePath = `./src/app/(site)/${_pageSlug}/page.tsx`;
+  let pageContent = await readFile(filePath, 'utf8');
 
-const addFetchDataInServer = async (_pageSlug) => {
-  console.log('fetch data in server')
-  let pageContent = await readFile(`./src/app/(site)/${_pageSlug}/page.tsx`, 'utf8')
-  pageContent = pageContent.replace("\/\/@xt-use-client", "");
-  pageContent = pageContent.replace("\/\/@xt-imports", "");
-  pageContent = pageContent.replace("\/\/@xt-fetch-outside", fetchServerOutside);
-  pageContent = pageContent.replace("const Page = () => {", fetchServerFunctionSign);
-  pageContent = pageContent.replace("\/\/@xt-fetch-inside", fetchServerInsidePage);
-  await writeFile(`./src/app/(site)/${_pageSlug}/page.tsx`, pageContent, 'utf8', { recursive: true, force: true })
-}
+  for (const replacement of replacements) {
+    const [pattern, replaceWith] = replacement;
+    pageContent = pageContent.replace(pattern, replaceWith);
+  }
 
-const addFetchDataInClient = async (_pageSlug) => {
-  console.log('fetch data in client')
-  let pageContent = await readFile(`./src/app/(site)/${_pageSlug}/page.tsx`, 'utf8')
-  pageContent = pageContent.replace("\/\/@xt-use-client", "'use client'");
-  pageContent = pageContent.replace("\/\/@xt-imports", fetchClientImports);
-  pageContent = pageContent.replace("\/\/@xt-fetch-outside", '');
-  pageContent = pageContent.replace("const Page = () => {", fetchClientFunctionSign);
-  pageContent = pageContent.replace("\/\/@xt-fetch-inside", fetchClientInsidePage);
-  await writeFile(`./src/app/(site)/${_pageSlug}/page.tsx`, pageContent, 'utf8', { recursive: true, force: true })
-}
+  await writeFile(filePath, pageContent, 'utf8', { recursive: true, force: true });
+};
 
+const addFetchDataInServer = async (_pageSlug = '') => {
+  const replacements = [
+    ["\/\/@xt-use-client", ""],
+    ["\/\/@xt-imports", ""],
+    ["\/\/@xt-fetch-outside", fetchServerOutside],
+    [/const\s+([\w\d]+)\s*=\s*\(\s*\)\s*=>\s*{/gim, 'const $1 = async () => {'],
+    ["\/\/@xt-fetch-inside", fetchServerInsidePage]
+  ];
+
+  await addFetchData(_pageSlug, addFetchDataInServer, replacements);
+};
+
+const addFetchDataInClient = async (_pageSlug = '') => {
+  const replacements = [
+    ["\/\/@xt-use-client", "'use client'"],
+    ["\/\/@xt-imports", fetchClientImports],
+    ["\/\/@xt-fetch-outside", ''],
+    [/const\s+Page\s*=\s*\(\s*\)\s*=>\s*{/gim, fetchClientFunctionSign],
+    ["\/\/@xt-fetch-inside", fetchClientInsidePage]
+  ];
+
+  await addFetchData(_pageSlug, addFetchDataInClient, replacements);
+};
 
 function generateSlug(inputString) {
   const sanitizedString = removeAccents(inputString)

@@ -4,8 +4,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   experimental: {
-    swcMinify: true
   },
+  logging: {
+    fetches: {
+      fullUrl: true
+    }
+  }
 };
 
 export default nextConfig;

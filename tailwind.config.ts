@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,14 +7,14 @@ module.exports = {
     "src/app/**/*.tsx",
     "src/xt/components/**/*.tsx",
     "src/xt/templates/components/**/*.tsx",
-    "src/xt/templates/pages/**/*.tsx",
+    "src/xt/templates/blocks/**/*.tsx",
     "src/xt/templates/generics/**/*.tsx",
   ],
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      border: '1px solid red',
+      border: "1px solid red",
       screens: {
         "2xl": "1400px",
       },
@@ -62,12 +62,12 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       spacing: {
-        '1': 'var(--space)',
-        '2': 'calc(var(--space) + 0.125rem)',
-        '3': 'calc(var(--space) + 0.25rem)',
-        '4': 'calc(var(--space) + 0.375rem)',
-        '5': 'calc(var(--space) + 0.5rem)',
-        '6': 'calc(var(--space) + 0.75rem)',
+        "1": "var(--space)",
+        "2": "calc(var(--space) + 0.125rem)",
+        "3": "calc(var(--space) + 0.25rem)",
+        "4": "calc(var(--space) + 0.375rem)",
+        "5": "calc(var(--space) + 0.5rem)",
+        "6": "calc(var(--space) + 0.75rem)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -89,4 +89,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

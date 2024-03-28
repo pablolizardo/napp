@@ -11,11 +11,11 @@ const fetchServerOutside = `async function getData() {
     return res.json()
 }
 `
-const fetchServerFunctionSign = `const Page = async () => {`
+// const fetchServerFunctionSign = `const Page = async () => {`
 const fetchServerInsidePage = `const data = await getData()`
 
 module.exports = {
     fetchServerOutside,
-    fetchServerFunctionSign,
+    // fetchServerFunctionSign,
     fetchServerInsidePage
 }

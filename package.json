@@ -10,8 +10,8 @@
     "test": "clear & jest",
     "xt:restart": "sh src/xt/scripts/restart-servers.sh",
     "xt:watch": "node src/xt/scripts/watch-config.js",
-    "xt:generate": "node src/xt/scripts/generate-model.js",
-    "xt": "clear & node src/xt/scripts/generate-model.js & npm run dev & npm run xt:watch"
+    "xt:generate": "node src/xt/scripts/generate-schema.js",
+    "xt": "for port in {3000..3010}; do lsof -ti:$port | xargs kill -9 ; done & node src/xt/scripts/generate-schema.js & npm run dev & npm run xt:watch"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
